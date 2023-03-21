@@ -24,9 +24,9 @@ include_directories(${libDir}/include)
 target_link_directories(${PROJECT_NAME} PRIVATE ${libDir})
 
 # set libraries will be link (libraries name)
-target_link_libraries(${PROJECT_NAME} PRIVATE demolib demolib2)
+target_link_libraries(${PROJECT_NAME} PRIVATE mylib)
 
 # add command
 add_custom_command(TARGET ${PROJECT_NAME}
-    COMMAND cp ../${libDir}/libdemolib2.so ./
+    COMMAND cp ../${libDir}/mylib.so ./
 )
